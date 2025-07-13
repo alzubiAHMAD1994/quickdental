@@ -3,132 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="QuickDental.net – A premium domain for modern dental businesses."/>
   <title>QuickDental.net – Premium Dental Domain</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top left, #e3f2fd, #ffffff);
+      background: linear-gradient(to right, #e0f2ff, #ffffff);
       color: #222;
-      overflow-x: hidden;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      background: #0d47a1;
+      padding: 12px 20px;
+      color: white;
+      font-weight: 600;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: white;
+      background: #ff9800;
+      padding: 8px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     header {
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
-      color: white;
       text-align: center;
       padding: 100px 20px 60px;
-      position: relative;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      top: -30px;
-      right: -30px;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
-      border-radius: 50%;
-      z-index: 1;
+      background: url('https://img.icons8.com/ios-filled/100/ffffff/tooth.png') no-repeat top center;
+      background-size: 100px;
+      background-color: #1976d2;
+      color: white;
     }
 
     header h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #ffffff, #cfd8dc);
+      font-size: 3rem;
+      margin-top: 120px;
+      background: linear-gradient(90deg, #fff, #cfd8dc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      position: relative;
-      z-index: 2;
     }
 
     header p {
-      font-size: 1.4rem;
-      font-weight: 400;
-      opacity: 0.95;
-      margin-top: 15px;
-      z-index: 2;
-      position: relative;
+      font-size: 1.3rem;
+      margin-top: 10px;
     }
 
     main {
-      max-width: 850px;
-      margin: 60px auto;
+      max-width: 900px;
+      margin: 40px auto;
       padding: 0 30px;
-    }
-
-    main p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
+      font-size: 1.15rem;
     }
 
     ul {
-      margin-bottom: 30px;
+      margin: 20px 0 30px;
       padding-left: 20px;
     }
 
     ul li {
-      margin-bottom: 14px;
-      font-size: 1.15rem;
-      position: relative;
+      margin-bottom: 12px;
       padding-left: 30px;
+      position: relative;
     }
 
     ul li::before {
-      content: "🌟";
-      font-size: 1.2rem;
+      content: "🦷";
       position: absolute;
       left: 0;
-      top: 0;
+    }
+
+    .alert {
+      background: #fff3cd;
+      color: #856404;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .countdown {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: #d32f2f;
+      font-weight: 600;
     }
 
     .cta {
       text-align: center;
-      margin: 70px 0;
+      margin: 30px 0;
     }
 
     .cta a {
-      background: linear-gradient(to right, #0d47a1, #1565c0);
+      background-color: #0d47a1;
       color: white;
       padding: 18px 50px;
       font-size: 1.3rem;
-      border: none;
       border-radius: 50px;
-      font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 8px 20px rgba(13, 71, 161, 0.3);
-      transition: all 0.35s ease;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(13, 71, 161, 0.3);
+      transition: all 0.3s ease;
       display: inline-block;
     }
 
     .cta a:hover {
-      background: linear-gradient(to right, #1565c0, #0d47a1);
-      transform: scale(1.05) translateY(-4px);
-      box-shadow: 0 12px 25px rgba(13, 71, 161, 0.4);
+      background-color: #002f6c;
+      transform: scale(1.05);
     }
 
-    .alert {
-      text-align: center;
-      font-size: 1.15rem;
-      margin-top: 30px;
-      color: #d32f2f;
-      font-weight: bold;
+    .email-btn {
+      background-color: #43a047;
+      margin-top: 15px;
+      display: inline-block;
+      padding: 14px 40px;
+      font-size: 1.1rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 6px 15px rgba(67, 160, 71, 0.3);
+      transition: 0.3s ease;
+    }
+
+    .email-btn:hover {
+      background-color: #2e7d32;
+    }
+
+    .testimonial {
+      margin: 40px 0;
+      background: #f0f0f0;
+      padding: 25px 30px;
+      border-left: 5px solid #0d47a1;
+      font-style: italic;
+      color: #444;
     }
 
     footer {
+      background: #f5f5f5;
       text-align: center;
-      background-color: #f1f1f1;
-      color: #555;
-      padding: 35px 20px;
+      padding: 30px;
       font-size: 0.95rem;
+      color: #555;
     }
 
     @media (max-width: 600px) {
@@ -136,22 +161,19 @@
         font-size: 2.2rem;
       }
 
-      header p {
-        font-size: 1.1rem;
-      }
-
-      .cta a {
+      .cta a, .email-btn {
         padding: 14px 30px;
         font-size: 1.1rem;
-      }
-
-      ul li {
-        font-size: 1.05rem;
       }
     }
   </style>
 </head>
 <body>
+
+  <div class="top-bar">
+    <span>Only $499 – Limited Time Offer</span>
+    <a href="https://www.afternic.com/domain/quickdental.net" target="_blank">Buy Now</a>
+  </div>
 
   <header>
     <h1>QuickDental.net</h1>
@@ -173,14 +195,51 @@
       ⚠️ This is a one-time opportunity – secure QuickDental.net before someone else does.
     </div>
 
+    <div class="countdown" id="countdown">
+      Offer ends in: <span id="timer">Loading...</span>
+    </div>
+
     <div class="cta">
       <a href="https://www.afternic.com/domain/quickdental.net" target="_blank">🔥 Buy Now – $499</a>
+    </div>
+
+    <div class="cta">
+      <a href="mailto:alzubi281@gmail.com" class="email-btn">📧 Contact Seller via Email</a>
+    </div>
+
+    <div class="testimonial">
+      “This domain speaks for itself. Clean, fast, and professional. Perfect for my digital dental startup.” – Dr. Sarah M.
     </div>
   </main>
 
   <footer>
-    &copy; 2025 QuickDental.net – Your Future Brand Starts Now.
+    &copy; 2025 QuickDental.net – Your Future Brand Starts Now. Powered by confidence and speed.
   </footer>
+
+  <script>
+    const countdown = document.getElementById('timer');
+    let offerEnd = new Date();
+    offerEnd.setHours(offerEnd.getHours() + 48); // 48 hours fake timer
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = offerEnd - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "Offer expired!";
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 
 </body>
 </html>
